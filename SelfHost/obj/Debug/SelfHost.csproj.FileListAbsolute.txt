@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\SDV701_Project_HAYDEN_HUGGINS\SelfHost\bin\Debug\SelfHost.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\SDV701_Project_HAYDEN_HUGGINS\SelfHost\bin\Debug\SelfHost.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\SDV701_Project_HAYDEN_HUGGINS\SelfHost\bin\Debug\SelfHost.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\SDV701_Project_HAYDEN_HUGGINS\SelfHost\obj\Debug\SelfHost.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\SDV701_Project_HAYDEN_HUGGINS\SelfHost\obj\Debug\SelfHost.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\SDV701_Project_HAYDEN_HUGGINS\SelfHost\obj\Debug\SelfHost.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\SDV701_Project_HAYDEN_HUGGINS\SelfHost\obj\Debug\SelfHost.csprojAssemblyReference.cache

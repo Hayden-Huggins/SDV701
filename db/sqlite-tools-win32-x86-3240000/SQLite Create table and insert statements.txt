@@ -1,0 +1,72 @@
+CREATE TABLE tblGenre
+( name VARCHAR(50) PRIMARY KEY,
+  description VARCHAR(255) NOT NULL,
+  maturityLevel CHAR(1) NOT NULL
+);
+
+CREATE TABLE tblBook
+( ISBN VARCHAR(17) PRIMARY KEY,
+  genreName VARCHAR(50) NOT NULL, 
+  name VARCHAR(255) NOT NULL,
+  price DECIMAL(4,2) NOT NULL,
+  lastModified DATETIME,
+  quantity int,
+  bookFormat CHAR(1) NOT NULL,
+  coverType CHAR(1),
+  serialKey VARCHAR(255), 
+  downloadURL VARCHAR(255),
+  FOREIGN KEY (genreName) REFERENCES tblGenre(name)
+);
+
+CREATE TABLE tblOrder
+( ID INTEGER PRIMARY KEY AUTOINCREMENT,
+  custName VARCHAR(255) NOT NULL, 
+  custEmailAddress VARCHAR(255) NOT NULL,
+  bookISBN VARCHAR(17),
+  quantity INT NOT NULL,
+  orderTotal DECIMAL(9,6) NOT NULL,
+  timeOfOrder DATETIME NOT NULL,
+  status CHAR(1) NOT NULL,
+  FOREIGN KEY (bookISBN) REFERENCES tblBook(ISBN)
+);
+
+INSERT INTO tblGenre
+VALUES ('Action','Fancy a chase? youre at the right place.','M');
+
+INSERT INTO tblGenre
+VALUES ('Adventure','Descover the perfect quests here!.','M');
+
+INSERT INTO tblGenre 
+VALUES ('Comedy','Sorrows best medicine!','G');
+
+INSERT INTO tblGenre 
+VALUES ('Romance','A kiss never hurt anybody','M');
+
+INSERT INTO tblGenre
+VALUES ('Sci-Fi','Idealistic for the futuristic','G');
+
+INSERT INTO tblGenre 
+VALUES ('Thriller','Dont scream.. yet.','A');
+
+INSERT INTO tblGenre
+VALUES ('Drama','One uping Dr Phil','G');
+
+INSERT INTO tblGenre 
+VALUES ('Sport','Speed Strength and Dexterity','G');
+
+INSERT INTO tblGenre 
+VALUES ('War','All love is fair in war','A');
+
+INSERT INTO tblGenre 
+VALUES ('Astronomy','The stars and beyond!','G');
+
+
+INSERT INTO tblBook
+VALUES ('12-4567-97246','Action','Golden Shooter',20.50,'2007-01-01 10:00:00',4,'P','H','','');
+
+
+INSERT INTO tblOrder (custName, custEmailAddress, bookISBN, quantity, orderTotal, timeOfOrder, status)
+VALUES ('Bob Pete','27 Nowhere Dr','12-4567-97246',1,10,'2007-01-01 10:00:00','P');
+
+INSERT INTO tblOrder (custName, custEmailAddress, bookISBN, quantity, orderTotal, timeOfOrder, status)
+VALUES ('John Cena','89 Sommerset Dr','12-4567-97246',2,20,'2008-01-01 10:00:00','P');
